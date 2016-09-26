@@ -1,0 +1,40 @@
+---
+subject: Welcome to BetBull!
+---
+
+<wrapper class="main-wrapper" bgcolor="#BADA55" height="200px">
+    <container>
+        <row>
+            <columns large="6" small="12" class="show-for-large">
+                <img src="assets/img/onboarding/together.png" alt="img text" width="200px" height="300px" />
+            </columns>
+            <columns large="6" small="12">
+                <container class="matches-list-content">
+                    {{#each matches}}
+                    {{this}}
+                    <row class="matches-list-item">
+                        <columns>
+                            <p class="match-item-text no-margin bold">
+                                <span class="nowrap">{{team1}}</span>
+                                {{#if team2}} v
+                                <span class="nowrap">{{team2}}</span>
+                                {{/if}}
+                            </p>
+                            <p class="match-item-subtext no-margin thin">
+                                <span class="nowrap">{{marketName}}: </span>
+                                <span class="nowrap">{{oddExtendedName}}</span>
+                            </p>
+                        </columns>
+                        <columns>
+                            <p class="match-item-text no-margin bold">{{price}}</p>
+                            <p class="match-item-subtext no-margin thin">{{matchStartTime}}</p>
+                        </columns>
+                    </row>
+                    {{/each}}
+                </container>
+            </columns>
+        </row>
+    </container>
+</wrapper>
+
+
